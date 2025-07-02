@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CardResponse(
-    val data: List<Card>
+    val data: List<Card> = emptyList()
 )
 
 @Serializable

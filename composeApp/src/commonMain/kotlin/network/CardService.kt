@@ -13,7 +13,7 @@ class CardService(
         val baseUrl = "https://api.pokemontcg.io/v2/cards"
         val response: HttpResponse = client.get(baseUrl) {
             if (!query.isNullOrEmpty()) {
-                url { parameters.append("q", query)}
+                url { parameters.append("q", "name:\"$query*\"") }
             }
         }
         return response.body()
