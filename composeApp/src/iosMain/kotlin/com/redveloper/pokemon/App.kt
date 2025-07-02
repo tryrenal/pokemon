@@ -3,4 +3,6 @@ package com.redveloper.pokemon
 import androidx.compose.runtime.Composable
 
 @Composable
-expect fun App()
+actual fun App() {
+    // For iOS
+}
